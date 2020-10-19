@@ -33,7 +33,7 @@ const App = () => {
       setFilter(filteredPosts);
     }
   };
-  const likePost = (postId) => {
+  const likePost = (postID) => {
     /*
       This function serves the purpose of increasing the number of likes by one, of the post with a given id.
 
@@ -47,9 +47,9 @@ const App = () => {
      */
     setPosts(
       posts.map((post) => {
-        if (post.id === postId) {
+        if (post.id === postID) {
           let newPost = { ...post };
-          newPost.likes += 1;
+          return newPost.likes += 1;
         } else {
           return post;
         }
