@@ -21,9 +21,9 @@ const Post = props => {
         />
       </div>
       {/* Is LikeSection getting all the props it needs to work correctly? */}
-      <LikeSection likePost={() => likePost(post.id)} />
+      <LikeSection postID={post.id} likePost={likePost} numberofLikes={post.likes} />
       {/* Comments also wants its props! */}
-      <Comments />
+      <Comments postID={post.id} comments={post.comments}/>
     </div>
   );
 };
